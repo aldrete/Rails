@@ -1,0 +1,30 @@
+  <div class="container">
+
+  <%= form_for @employee, url: {action: :update} do |f| %>
+     
+     <h3>Edit company</h3>
+	  <%= "<div>#{@employee.errors.full_messages.first}</div>".html_safe if @employee.errors.any? %>
+      <p>
+         <div>   
+            <label>Company name</label>   
+               <%=f.collection_select :company_name, Company.all, :company_name, :company_name, include_blank: false %>
+        </div>
+        <div>   
+            <label>Name</label>   
+              <%= f.text_field :name %>   
+        </div>
+        <div>   
+            <label>RFC</label>   
+              <%= @employee.rfc %>   
+        </div>
+        <div>   
+            <label>Position</label>   
+              <%= f.text_field :position %>   
+        </div>
+        </p>
+     <div>
+        <%= link_to 'Back', { controller: 'employees', action: 'index'} %>
+        <%= f.submit 'Update company' %>
+      </div>
+  <% end %>
+</div>

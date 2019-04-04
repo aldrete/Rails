@@ -1,0 +1,46 @@
+  <div class="container">
+
+  <%= form_for @companies, url: {action: :update} do |f| %>
+     
+     <h3>Edit company</h3>
+	  <%= "<div>#{@companies.errors.full_messages.first}</div>".html_safe if @companies.errors.any? %>
+      <p>
+        <div>   
+            <label>company Name</label>   
+              <%= f.text_field :company_name %>   
+        </div>
+        <div>   
+            <label>street_name</label>   
+              <%= f.text_field :street_name %>   
+        </div>
+        <div>   
+            <label>Colony_name</label>   
+              <%= f.text_field :Colony_name %>   
+        </div>
+        <div>   
+            <label>ext_num</label>   
+              <%= f.text_field :ext_num %>   
+        </div>
+        <div>   
+            <label>int_num</label>   
+              <%= f.text_field :int_num %>   
+        </div>
+        <div>   
+            <label>zip_code</label>   
+              <%= f.text_field :zip_code %>   
+        </div>
+        <div>   
+            <label>city</label>   
+              <%= f.text_field :city %>   
+        </div>
+        <div>   
+            <label>country</label>   
+              <%= f.text_field :country %>   
+        </div>
+        </p>
+     <div>
+        <%= link_to 'Back', { controller: 'companies', action: 'index'} %>
+        <%= f.submit 'Update company' %>
+      </div>
+  <% end %>
+</div>

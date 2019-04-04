@@ -1,0 +1,108 @@
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - '2019-04-02 05:14:36.398549'
+    - '2019-04-02 05:14:36.398549'
+
+---
+companies:
+  columns:
+  - id
+  - company_name
+  - street_name
+  - Colony_name
+  - ext_num
+  - int_num
+  - zip_code
+  - city
+  - country
+  - created_at
+  - updated_at
+  records: 
+  - - 14
+    - sgdfsfg
+    - sgdssg
+    - sdgsf
+    - 34534
+    - 345345
+    - 3453
+    - sgsg
+    - sgsfg
+    - '2019-04-04 08:42:04.243406'
+    - '2019-04-04 08:42:04.243406'
+  - - 15
+    - sgfgsfghjfg
+    - ebdfhdf
+    - gfgsg
+    - 35345
+    - 345345
+    - 63463
+    - sfgsg
+    - jhfgjg
+    - '2019-04-04 08:42:22.079407'
+    - '2019-04-04 08:42:22.079407'
+
+---
+employees:
+  columns:
+  - id
+  - name
+  - rfc
+  - position
+  - created_at
+  - updated_at
+  - company_name
+  records: 
+  - - 16
+    - asdsad
+    - '32323'
+    - escudero
+    - '2019-04-04 09:11:23.350638'
+    - '2019-04-04 09:11:23.350638'
+    - sgdfsfg
+
+---
+users:
+  columns:
+  - id
+  - email
+  - encrypted_password
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - created_at
+  - updated_at
+  - username
+  - company
+  - rfc
+  records: 
+  - - 1
+    - l@gmail.com
+    - "$2a$11$XvAxMw42HK7fWTNCR7JuQeS5jr.BwoFBibgSEj17Cw29fUzsuOpFm"
+    - 
+    - 
+    - 
+    - '2019-04-02 07:44:10.861059'
+    - '2019-04-02 07:44:10.861059'
+    - batman
+    - bad
+    - '1523'
+  - - 2
+    - lycantropodo@gmail.com
+    - "$2a$11$XVjgselZ6u7m9I6kmUG0/OhzkFeZqoeCgdLkeT/BmWhWSth9EHKga"
+    - 
+    - 
+    - 
+    - '2019-04-04 07:44:58.504726'
+    - '2019-04-04 08:57:03.847168'
+    - batman
+    - '1993'
+    - '1523'

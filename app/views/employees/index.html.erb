@@ -1,0 +1,45 @@
+<!DOCTYPE html>   
+<html>   
+<body>   
+ <div class="container">   
+    <h3>Employee List </h3>     
+      <br>   
+    <table border="2">   
+      <thead>   
+      <tr>
+        <th>Company</th>    
+        <th>Name</th>   
+        <th>RFC</th>   
+        <th>Position</th>   
+        <th>Actions</th>
+
+      </tr>   
+      </thead>   
+      <tbody>   
+      
+      <% @employee.each do |employee| %>   
+          <tr>
+            <td><%= employee.company_name %></td>   
+            <td><%= employee.name %></td>   
+            <td><%= employee.rfc %></td>
+            <td><%= employee.position %></td>     
+              
+               <div>   
+               <td>
+               <%= link_to 'Show', emp_show_path(employee) %>
+               <%= link_to 'Edit', emp_edit_path(employee)%>
+               <%= link_to 'Delete', emp_destroy_path(employee), method: :delete %>
+              </div>   
+            </td>   
+          </tr>   
+      <% end %>   
+      </tbody>   
+    </table>  
+    <div>
+                <br><%= link_to 'Sign out' , destroy_user_session_path, method: :delete %> 
+               <br><%= link_to 'Add Company', controller: "companies", action: "index"%> 
+               <br><%= link_to 'Add Employee', controller: "employees", action: "new"%>   
+    </div> 
+    </div>   
+  </body>   
+</html>  

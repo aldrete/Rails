@@ -1,0 +1,55 @@
+<!DOCTYPE html>   
+<html>   
+<body>   
+ <div class="container">   
+    <h3>Company List</h3>         
+      <br>   
+    <table border="2">   
+      <thead>   
+      <tr>   
+        <th>Name</th>   
+        <th>Street Name</th>   
+        <th>Colony</th>   
+        <th>Ext num</th>   
+        <th>Int num</th>
+        <th>Zip code</th>
+        <th>City</th>
+        <th>Country</th>
+        <th>Actions</th>
+
+      </tr>   
+      </thead>   
+      <tbody> 
+
+      <% @companies.each do |company| %>   
+          <tr>   
+            <td><%= company.company_name %></td>   
+            <td><%= company.street_name %></td>
+            <td><%= company.Colony_name %></td>  
+            <td><%= company.ext_num %></td>  
+            <td><%= company.int_num %></td>  
+            <td><%= company.zip_code %></td>
+            <td><%= company.city %></td>  
+            <td><%= company.country %></td>       
+
+               <div>   
+               <td>
+
+               <%= link_to 'Show', show_path(company) %>
+               <%= link_to 'Edit', edit_path(company)%>
+              </div>   
+            </td>   
+          </tr>   
+      <% end %>   
+      </tbody>   
+    </table>   
+    <div>
+              <br><%= link_to 'Sign out' , destroy_user_session_path, method: :delete %> 
+              <br><%= link_to 'Add Company', controller: "companies", action: "new"%>  
+              <br><%= link_to 'Add Employee', controller: "employees", action: "index"%>   
+    
+    
+    </div>
+    </div>   
+  </body>   
+</html>  

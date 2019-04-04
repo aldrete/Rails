@@ -1,0 +1,31 @@
+<div class="container">   
+  <%= form_for @employee, url: {action: :create} do |f| %>   
+      <div>   
+        <h3>Add a employee</h3>   
+      </div>   
+      <div>   
+        <p>   
+          <%= "<div>#{@employee.errors.full_messages.first}</div>".html_safe if @employee.errors.any? %>   
+        <div>   
+            <label>Company Name</label>      
+             <%=f.collection_select :company_name, Company.all, :company_name, :company_name, include_blank: false %>
+        <div>   
+            <label>Name</label>   
+              <%= f.text_field :name %>   
+        </div>
+        <div>   
+            <label>RFC</label>   
+              <%= f.text_field :rfc %>   
+        </div>
+        <div>   
+            <label>Position</label>   
+              <%= f.text_field :position %>   
+        </div>       
+         </p>   
+      </div>   
+      <div>   
+        <%= link_to 'Back', { controller: 'employees', action: 'index'} %>   
+        <%= f.submit 'Create employee' %>   
+      </div>   
+  <% end %>   
+</div> 

@@ -1,0 +1,23 @@
+<div class="container">        
+        <h3>Employee information</h3>   
+        <div>   
+            <label>Company</label>   
+              <%= @employee.company_name %>   
+        </div>
+        <div>   
+            <label>Name</label>   
+              <%= @employee.name %>   
+        </div>
+        <div>   
+            <label>RFC</label>   
+              <%= @employee.rfc %>   
+        </div>
+
+        <div>   
+            <label>Position</label>   
+              <%= @employee.position %>   
+        </div>
+      <div>   
+        <%= link_to 'Back', { controller: 'employees', action: 'index'} %>   
+      </div>   
+</div>
