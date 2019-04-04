@@ -4,9 +4,10 @@ development:
   reconnect: false
   database: myapp_development
   host: 127.0.0.1
+  port: 3306
   pool: 5
-  username: root
-  password: root
+  username: boby
+  password: boby
  
 test:
   adapter: mysql2
@@ -14,9 +15,10 @@ test:
   reconnect: false
   database: myapp_test
   host: 127.0.0.1
+  port: 3306
   pool: 5
-  username: root
-  password: root
+  username: boby
+  password: boby
 
 
 production:
@@ -25,6 +27,7 @@ production:
   reconnect: false
   database: myapp_production
   host: 127.0.0.1
+  port: 3306
   pool: 5
-  username: root
-  password: root
+  username: boby
+  password: boby
