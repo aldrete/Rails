@@ -1,6 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-
+  config.DATABASE_URL  = 'mysql2://b3fe74640c4a11:29d046e5@us-cdbr-iron-east-03.cleardb.net/heroku_9fe95daf05aeb39?reconnect=true'
   # Code is not reloaded between requests.
   config.cache_classes = true
 
