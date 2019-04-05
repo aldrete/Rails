@@ -7,7 +7,7 @@ end
 
 gem 'grape'   
 
-gem 'mysql2'
+gem 'mysql2', '~> 0.3.18'
 
 gem 'yaml_db'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
